@@ -16,8 +16,8 @@ conda env create -f environment.yml
 
 ## Dataset 
 
-The synthetic dataset are provided by Deschaintre et al.2018, please download through this [link](https://repo-sam.inria.fr/fungraph/deep-materials/).
-The real images dataset can be downloaded from this [link](https://drive.google.com/drive/folders/1FzyT24GUFXpqjZ12Rabh9qjDsZNFS9m7?usp=sharing)
+The synthetic dataset are provided by Deschaintre et al. 2018, please download through this [link](https://repo-sam.inria.fr/fungraph/deep-materials/).
+The real images dataset can be downloaded from this [link](https://drive.google.com/drive/folders/1FzyT24GUFXpqjZ12Rabh9qjDsZNFS9m7?usp=sharing).
 
 The sturcture of real images folder looks like this:
 
@@ -33,12 +33,12 @@ folder:
 	...
 ```
 
-where img1, img2, img3 are the same scene lit under different light positions. The scenes are randomly shot under random environment
+where img1, img2, img3 are the same scene lit under different light positions. The scenes are randomly shot under random environment.
 
 
 ## Inference
 
-The pretrained checkpoint model can be downloaded from this [link](https://drive.google.com/drive/folders/1FzyT24GUFXpqjZ12Rabh9qjDsZNFS9m7?usp=sharing)
+The pretrained checkpoint model can be downloaded from this [link](https://drive.google.com/drive/folders/1FzyT24GUFXpqjZ12Rabh9qjDsZNFS9m7?usp=sharing).
 
 To run the inference code, please use this command:
 
@@ -46,7 +46,7 @@ To run the inference code, please use this command:
 python test.py --name $exp --dataroot $data --resize_or_crop resize --MyTest ALL_4D --netG NewVA_Net_Light --which_epoch final --mode Real --savename $name
 ```
 
-Please download the checkpoint and save it into `./checkpoints/$exp/`. `$data` is the path of test dataset. As default, the output results will be save into `./results/$exp/$name` 
+Please download the checkpoint and save it into `./checkpoints/$exp/`. `$data` is the path of test dataset. As default, the output results will be save into `./results/$exp/$name`. 
 
 Here are some more instructions about the command arguments:
 
@@ -107,7 +107,7 @@ There are three steps required to train the model:
 python train.py --dataroot $SynData --MyTest ALL_4D --name $name --niter $epoch --resize_or_crop crop --netG NewVA_Net --augment_input
 ```
 
-Where `$SynData` is the path of synthetic dataset,`$epoch` is the training epochs 
+Where `$SynData` is the path of synthetic dataset,`$epoch` is the training epochs. 
 
 
 2. Train on synthetic images with five discriminators:
@@ -116,7 +116,7 @@ Where `$SynData` is the path of synthetic dataset,`$epoch` is the training epoch
 python train.py --dataroot $SynData --MyTest ALL_5D_Render --name $name --niter $epoch --resize_or_crop crop --netG NewVA_Net_Light --augment_input --continue_train --load_pretrain $loadckpt --which_epoch $load_epoch
 ```
 
-Where `$loadckpt` is the path saving the checkpoint obtained in previous step (step 1), `$load_epoch` is the checkpoint we would like load
+Where `$loadckpt` is the path saving the checkpoint obtained in previous step (step 1), `$load_epoch` is the checkpoint we would like load.
 
 
 3. Finetune network on real images:
@@ -125,7 +125,7 @@ Where `$loadckpt` is the path saving the checkpoint obtained in previous step (s
 python train.py --dataroot $SynData --MyTest ALL_5D_Render --name $name --niter $epoch --resize_or_crop crop --netG NewVA_Net_Light --augment_input --continue_train --which_epoch $epoch --load_pretrain $loadckpt --real_train --real_dataroot $RealData
 ```
 
-Where `$loadckpt` is the path saving the checkpoint obtained in previous step (step 2), `$load_epoch` is the checkpoint we would like load, `$RealData` is the path of saved real images
+Where `$loadckpt` is the path saving the checkpoint obtained in previous step (step 2), `$load_epoch` is the checkpoint we would like load, `$RealData` is the path of saved real images.
 
 
 ## Citation
