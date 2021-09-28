@@ -124,7 +124,7 @@ Where `$loadckpt` is the path saving the checkpoint obtained in previous step (s
 python train.py --dataroot $SynData --MyTest ALL_5D_Render --name $name --niter $epoch --resize_or_crop crop --netG NewVA_Net_Light --augment_input --continue_train --which_epoch $epoch --load_pretrain $loadckpt --real_train --real_dataroot $RealData
 ```
 
-Where `$loadckpt` is the path saving the checkpoint obtained in previous step (step 1), `$load_epoch` is corresponding epoch number we would like load, `$RealData` is the path of saved real images
+Where `$loadckpt` is the path saving the checkpoint obtained in previous step (step 2), `$load_epoch` is corresponding epoch number we would like load, `$RealData` is the path of saved real images
 
 
 ## Citation
