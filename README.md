@@ -1,5 +1,6 @@
 # Adversarial-Single-Image-SVBRDF-Estimation-with-Hybrid-Training
-This is code of "Adversarial Single-Image SVBRDF Estimation with Hybrid Training"
+
+This is code of "Adversarial Single-Image SVBRDF Estimation with Hybrid Training" [Project](https://people.engr.tamu.edu/nimak/Papers/EG2021_SVBRDF/index.html) | [Paper](https://people.engr.tamu.edu/nimak/Data/EG21_SVBRDF.pdf)
 
 <img src='./misc/representation.jpg'>
 
