@@ -46,7 +46,7 @@ To run the inference code, please use this command:
 python test.py --name $exp --dataroot $data --resize_or_crop resize --MyTest ALL_4D --netG NewVA_Net_Light --which_epoch final --mode Real --savename $name
 ```
 
-Please download the checkpoint and save it into `./checkpoints/$exp/`. As default, the output results will be save into `./results/$exp/$name` 
+Please download the checkpoint and save it into `./checkpoints/$exp/`. `$data` is the path of test dataset. As default, the output results will be save into `./results/$exp/$name` 
 
 Here are some more instructions about the command arguments:
 
