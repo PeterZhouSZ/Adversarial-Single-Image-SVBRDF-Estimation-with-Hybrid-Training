@@ -5,7 +5,7 @@ This is code of "Adversarial Single-Image SVBRDF Estimation with Hybrid Training
 
 
 ## Requirements
-This codebase was developed and tested with PyTorch 1.2 and Python 3.6 in both windows and Linux system.
+This codebase was developed and tested with PyTorch 1.6 and Python 3.6 in both windows and Linux system.
 To install environments, please use this command:
 
 ```bash
@@ -52,46 +52,46 @@ Here are some more instructions about the command arguments:
 ```
 --name:			
 		
-your experiment name
+	experiment name
 
 
 --dataroot:	
 			
-path of test dataset
+	path of test dataset
 
 
 --MyTest: ['ALL_4D','ALL_5D']
 						
-ALL_4D: output four feature maps 
+	ALL_4D: output four feature maps 
 
-ALL_5D: output four feature maps + rerendered images using estimated feature maps and light position given single input images
+	ALL_5D: output four feature maps + rerendered images using estimated feature maps and light position given single input images
 
 
 --which_epoch:			
 
-the name of checkpoint to load
+	which checkpoint to load
 
 
 --mode: ['Syn', 'Real']	
 			
-Syn: show both ground truth and estimated results 
+	Syn: save both ground truth and estimated results 
 
-Real: only show estimated results
+	Real: only save estimated results
 
 
 --savename: 			
 
-the folder name where results are saved
+	the folder name where results are saved
 
 
 --savelight_to_multi: 	
 
-save estimated light position into multiple .txt files (each file for each test image)
+	save estimated light position into multiple .txt files (each file for each test image)
 
 
 --savelight_to_one: 	
 
-save estimated light position into single .txt files (one file for all test images)
+	save estimated light position into single .txt files (one file for all test images)
 
 ```
 
