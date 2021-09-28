@@ -25,18 +25,20 @@ To run the inference code, please use this command:
 ```
 python test.py --name $exp --dataroot $data --resize_or_crop resize --MyTest ALL_4D --netG NewVA_Net_Light --which_epoch final --mode Real --savename $name
 ```
-Please download the checkpoint and save it into <./checkpoints/$exp/>, the output results will be save into <./results/$exp/$name>
+Please download the checkpoint and save it into ./checkpoints/$exp/, the output results will be save into ./results/$exp/$name as default
 
-
-Here are some instructions about the command:
+Here are some more instructions about the command:
 
 ```
---name:		    your experiment name
---dataroot: 	path of test dataset
---MyTest: 		[ALL_4D: output four feature maps || ALL_5D: output four feature maps + rerendered images using estimated feature maps and light position given single input images]
---which_epoch:  the name of checkpoint to load
---mode: 		[Syn: show both ground truth and estimated results || Real: only show estimated results]
---savename: 	the folder name where results are saved
+--name:					your experiment name
+--dataroot:				path of test dataset
+--MyTest: 				[ALL_4D: output four feature maps || ALL_5D: output four feature maps + rerendered images using estimated feature maps and light position given single input images]
+--which_epoch:			the name of checkpoint to load
+--mode: 				[Syn: show both ground truth and estimated results || Real: only show estimated results]
+--savename: 			the folder name where results are saved
+--savelight_to_multi: 	save estimated light position into multiple .txt files (each file for each test image)
+--savelight_to_one: 	save estimated light position into single .txt files (one file for all test images)
+
 ```
 
 ## Training
