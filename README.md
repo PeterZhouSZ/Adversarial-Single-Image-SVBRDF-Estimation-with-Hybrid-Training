@@ -17,7 +17,7 @@ conda env create -f environment.yml
 ## Dataset 
 
 The synthetic dataset are provided by Deschaintre et al. 2018, please download through this [link](https://repo-sam.inria.fr/fungraph/deep-materials/).
-The real images dataset can be downloaded from this [link](https://drive.google.com/drive/folders/1FzyT24GUFXpqjZ12Rabh9qjDsZNFS9m7?usp=sharing).
+The real images dataset can be downloaded from this [link](https://drive.google.com/file/d/14c5LoyjDlg2x5MELbyEnH1XaDeitWQPX/view?usp=sharing).
 
 The sturcture of real images folder looks like this:
 
@@ -38,7 +38,7 @@ where img1, img2, img3 are the same scene lit under different light positions. T
 
 ## Inference
 
-The pretrained checkpoint model can be downloaded from this [link](https://drive.google.com/drive/folders/1FzyT24GUFXpqjZ12Rabh9qjDsZNFS9m7?usp=sharing).
+The pretrained checkpoint model can be downloaded from this [link](https://drive.google.com/file/d/1WUYpTb-wnX0b0025dlRCEQcXkK5W6nbO/view?usp=sharing).
 
 To run the inference code, please use this command:
 
